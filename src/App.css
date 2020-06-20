@@ -6,6 +6,33 @@
   height: 40vmin;
   pointer-events: none;
 }
+.desktop {
+  display: block !important;
+}
+.desktop-flex {
+  display: flex !important;
+}
+.mobile {
+  display: none !important;
+}
+.mobile-flex {
+  display: none !important;
+}
+
+@media(max-width:768px) {
+  .desktop {
+    display: none !important;
+  }
+  .desktop-flex {
+    display: none !important;
+  }
+  .mobile {
+    display: block !important;
+  }
+  .mobile-flex {
+    display: flex !important;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -36,3 +63,20 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'VarelaRound-Regular';
+  src: url('Assets/Fonts/VarelaRound-Regular.eot');
+  src: url('Assets/Fonts/VarelaRound-Regular.otf') format('embedded-opentype'),
+       url('Assets/Fonts/VarelaRound-Regular.woff') format('woff'),
+       url('Assets/Fonts/VarelaRound-Regular.ttf') format('truetype'),
+       url('Assets/Fonts/VarelaRound-Regular.svg') format('svg');
+  }
+  * {
+    font-family: 'VarelaRound-Regular';
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+  }
